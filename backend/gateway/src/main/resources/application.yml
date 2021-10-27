@@ -1,0 +1,21 @@
+spring:
+  profiles:
+    group:
+      dev: "common"
+---
+spring:
+  profiles:
+    group:
+      prod:  "common"
+---
+spring:
+  profiles:
+    group:
+      prod-eureka: "common,eureka,router"
+---
+spring:
+  security:
+
+  profiles:
+    active: ${PROFILE:prod-eureka}
+

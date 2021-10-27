@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: eureka-server
+
+server:
+  port: 8761
+
+eureka:
+  client:
+    # 유레카 서버와 상호 작용 속성, 다른 유레카서버로 부터 레지스트리를 가져올지 여부, 유레카 개발 서버는 사용안함
+    fetch-registry: false
+    # 유레카 서버와 상호 작용 속성, 유레카의 레지스트리에 등록할지 여부, 유레카 개발 서버는 사용안함
+    register-with-eureka: false
+  server:
+    # 서비스인스턴스 상태(Ping) 체크(30초). false 일 경우 갱신요청 못받으면 레지스트리에서 삭제, true 면 못받아도 보존, 개발단계에서는 false
+    enable-self-preservation: true
+

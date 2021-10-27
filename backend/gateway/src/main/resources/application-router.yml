@@ -1,0 +1,12 @@
+spring:
+  config:
+    activate:
+      on-profile: router
+  cloud:
+    gateway:
+      routes:
+        - id: user
+          uri: lb://USER-SERVICE
+          predicates:
+            - Path=/api/user/**,/api/auth/**
+      auth-exclude-url: /api/auth/login,/api/auth/refresh

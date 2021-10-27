@@ -1,0 +1,72 @@
+spring:
+  config:
+    activate:
+      on-profile: common
+  application:
+    name: user-service
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create
+  datasource:
+    url: jdbc:mysql://${DB_HOST:13.125.209.62}:${DB_PORT:3306}/${DB_NAME:jsp_test}
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:Q1w2e3r4}
+  mail:
+    host: ${MAIL_HOST:smtp.naver.com}
+    port: ${MAIL_PORT:587}
+    username: ${MAIL_USERNAME:p-bunda}
+    password: ${MAIL_USERNAME:Q!w2e3r4}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+  mvc:
+    throw-exception-if-no-handler-found: true
+  web:
+    resources:
+      add-mappings: false
+
+server:
+  port: 8601
+
+# 유레카
+eureka:
+  client:
+    enabled: false
+
+# Actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+        exclude: 'threaddump,heapdump'
+
+
+bunda:
+  signup:
+    expired: 120 #10분
+  email:
+    send: true
+    expired: 60 #10분
+  phone:
+    send: false
+    expired: 180 #3분
+
+  token:
+    access:
+      expired: 60
+      secret: ${ACCESS_SECRET:accessaccessaccessaccessaccessaccessaccessaccessaccessaccessaccessaccessaccessaccessaccessaccessaccessaccessaccessaccessaccessaccessaccessaccess}
+      url: /auth/login
+    refresh:
+      expired: 300
+      secret: ${REFRESH_SECRET:refreshrefreshrefreshrefreshrefreshrefreshrefreshrefreshrefreshrefreshrefreshrefreshrefreshrefreshrefreshrefreshrefreshrefreshrefreshrefresh}
+      url: /auth/refresh
+
+logging:
+  level:
+    org.hibernate.type: trace

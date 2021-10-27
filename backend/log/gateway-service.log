@@ -1,0 +1,1442 @@
+20:06:45.100 [main] INFO  k.b.g.GatewayServiceApplication  - Starting GatewayServiceApplication using Java 14 on DESKTOP-TGGJB9J with PID 38812 (G:\git\bunda\backend\gateway-service\target\classes started by kjhhj in G:\git\bunda\backend)
+20:06:45.103 [main] INFO  k.b.g.GatewayServiceApplication  - The following profiles are active: prod-eureka,common,eureka
+20:06:45.103 [background-preinit] INFO  o.h.validator.internal.util.Version  - HV000001: Hibernate Validator 6.2.0.Final
+20:06:46.185 [main] INFO  o.s.cloud.context.scope.GenericScope  - BeanFactory id=0acb8587-1229-3fd8-a8e5-07beaba7a9af
+20:06:46.266 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20:06:46.268 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20:06:46.270 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  - Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20:06:46.389 [main] WARN  o.s.b.w.r.c.AnnotationConfigReactiveWebServerApplicationContext  - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'authenticationFilter' defined in file [G:\git\bunda\backend\gateway-service\target\classes\kr\bunda\gateway\filter\AuthenticationFilter.class]: Unexpected exception during bean creation; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'spring.cloud.gateway.routes.auth-exclude-url' in value "${spring.cloud.gateway.routes.auth-exclude-url}"
+20:06:46.424 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener  - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+20:06:46.446 [main] ERROR o.s.boot.SpringApplication  - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'authenticationFilter' defined in file [G:\git\bunda\backend\gateway-service\target\classes\kr\bunda\gateway\filter\AuthenticationFilter.class]: Unexpected exception during bean creation; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'spring.cloud.gateway.routes.auth-exclude-url' in value "${spring.cloud.gateway.routes.auth-exclude-url}"
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:64)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at kr.bunda.gateway.GatewayServiceApplication.main(GatewayServiceApplication.java:15)
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'spring.cloud.gateway.routes.auth-exclude-url' in value "${spring.cloud.gateway.routes.auth-exclude-url}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126)
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239)
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210)
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:175)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:936)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1354)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1204)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	... 14 common frames omitted
+20:08:48.121 [background-preinit] INFO  o.h.validator.internal.util.Version  - HV000001: Hibernate Validator 6.2.0.Final
+20:08:48.128 [main] INFO  k.b.g.GatewayServiceApplication  - Starting GatewayServiceApplication using Java 14 on DESKTOP-TGGJB9J with PID 34428 (G:\git\bunda\backend\gateway-service\target\classes started by kjhhj in G:\git\bunda\backend)
+20:08:48.129 [main] INFO  k.b.g.GatewayServiceApplication  - The following profiles are active: prod-eureka,common,eureka
+20:08:50.195 [main] INFO  o.s.cloud.context.scope.GenericScope  - BeanFactory id=0acb8587-1229-3fd8-a8e5-07beaba7a9af
+20:08:50.280 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20:08:50.282 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20:08:50.286 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  - Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20:08:50.407 [main] WARN  o.s.b.w.r.c.AnnotationConfigReactiveWebServerApplicationContext  - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'authenticationFilter' defined in file [G:\git\bunda\backend\gateway-service\target\classes\kr\bunda\gateway\filter\AuthenticationFilter.class]: Unexpected exception during bean creation; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'spring.cloud.gateway.auth-exclude-url' in value "${spring.cloud.gateway.auth-exclude-url}"
+20:08:50.442 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener  - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+20:08:50.462 [main] ERROR o.s.boot.SpringApplication  - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'authenticationFilter' defined in file [G:\git\bunda\backend\gateway-service\target\classes\kr\bunda\gateway\filter\AuthenticationFilter.class]: Unexpected exception during bean creation; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'spring.cloud.gateway.auth-exclude-url' in value "${spring.cloud.gateway.auth-exclude-url}"
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:64)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at kr.bunda.gateway.GatewayServiceApplication.main(GatewayServiceApplication.java:15)
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'spring.cloud.gateway.auth-exclude-url' in value "${spring.cloud.gateway.auth-exclude-url}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126)
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239)
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210)
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:175)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:936)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1354)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1204)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	... 14 common frames omitted
+20:08:51.747 [main] INFO  k.b.g.GatewayServiceApplication  - Starting GatewayServiceApplication using Java 14 on DESKTOP-TGGJB9J with PID 44028 (G:\git\bunda\backend\gateway-service\target\classes started by kjhhj in G:\git\bunda\backend)
+20:08:51.754 [main] INFO  k.b.g.GatewayServiceApplication  - The following profiles are active: prod-eureka,common,eureka
+20:08:51.884 [background-preinit] INFO  o.h.validator.internal.util.Version  - HV000001: Hibernate Validator 6.2.0.Final
+20:08:53.279 [main] INFO  o.s.cloud.context.scope.GenericScope  - BeanFactory id=0acb8587-1229-3fd8-a8e5-07beaba7a9af
+20:08:53.377 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20:08:53.378 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20:08:53.381 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  - Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20:08:53.604 [main] WARN  o.s.b.w.r.c.AnnotationConfigReactiveWebServerApplicationContext  - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'authenticationFilter' defined in file [G:\git\bunda\backend\gateway-service\target\classes\kr\bunda\gateway\filter\AuthenticationFilter.class]: Unexpected exception during bean creation; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'spring.cloud.gateway.auth-exclude-url' in value "${spring.cloud.gateway.auth-exclude-url}"
+20:08:53.651 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener  - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+20:08:53.674 [main] ERROR o.s.boot.SpringApplication  - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'authenticationFilter' defined in file [G:\git\bunda\backend\gateway-service\target\classes\kr\bunda\gateway\filter\AuthenticationFilter.class]: Unexpected exception during bean creation; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'spring.cloud.gateway.auth-exclude-url' in value "${spring.cloud.gateway.auth-exclude-url}"
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:64)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at kr.bunda.gateway.GatewayServiceApplication.main(GatewayServiceApplication.java:15)
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'spring.cloud.gateway.auth-exclude-url' in value "${spring.cloud.gateway.auth-exclude-url}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126)
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239)
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210)
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:175)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:936)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1354)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1204)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	... 14 common frames omitted
+20:09:00.739 [main] INFO  k.b.g.GatewayServiceApplication  - Starting GatewayServiceApplication using Java 14 on DESKTOP-TGGJB9J with PID 20304 (G:\git\bunda\backend\gateway-service\target\classes started by kjhhj in G:\git\bunda\backend)
+20:09:00.737 [background-preinit] INFO  o.h.validator.internal.util.Version  - HV000001: Hibernate Validator 6.2.0.Final
+20:09:00.741 [main] INFO  k.b.g.GatewayServiceApplication  - The following profiles are active: prod-eureka,common,eureka
+20:09:02.019 [main] INFO  o.s.cloud.context.scope.GenericScope  - BeanFactory id=0acb8587-1229-3fd8-a8e5-07beaba7a9af
+20:09:02.123 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20:09:02.124 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20:09:02.128 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  - Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20:09:02.275 [main] WARN  o.s.b.w.r.c.AnnotationConfigReactiveWebServerApplicationContext  - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'authenticationFilter' defined in file [G:\git\bunda\backend\gateway-service\target\classes\kr\bunda\gateway\filter\AuthenticationFilter.class]: Unexpected exception during bean creation; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'spring.cloud.gateway.auth-exclude-url' in value "${spring.cloud.gateway.auth-exclude-url}"
+20:09:02.317 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener  - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+20:09:02.339 [main] ERROR o.s.boot.SpringApplication  - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'authenticationFilter' defined in file [G:\git\bunda\backend\gateway-service\target\classes\kr\bunda\gateway\filter\AuthenticationFilter.class]: Unexpected exception during bean creation; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'spring.cloud.gateway.auth-exclude-url' in value "${spring.cloud.gateway.auth-exclude-url}"
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:64)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at kr.bunda.gateway.GatewayServiceApplication.main(GatewayServiceApplication.java:15)
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'spring.cloud.gateway.auth-exclude-url' in value "${spring.cloud.gateway.auth-exclude-url}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126)
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239)
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210)
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:175)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:936)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1354)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1204)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	... 14 common frames omitted
+20:14:22.027 [background-preinit] INFO  o.h.validator.internal.util.Version  - HV000001: Hibernate Validator 6.2.0.Final
+20:14:22.033 [main] INFO  k.b.g.GatewayServiceApplication  - Starting GatewayServiceApplication using Java 14 on DESKTOP-TGGJB9J with PID 25532 (G:\git\bunda\backend\gateway-service\target\classes started by kjhhj in G:\git\bunda\backend)
+20:14:22.034 [main] INFO  k.b.g.GatewayServiceApplication  - The following profiles are active: prod-eureka,common,eureka,router
+20:14:23.283 [main] INFO  o.s.cloud.context.scope.GenericScope  - BeanFactory id=0acb8587-1229-3fd8-a8e5-07beaba7a9af
+20:14:23.363 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20:14:23.364 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20:14:23.367 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  - Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20:14:42.895 [main] INFO  o.s.cloud.commons.util.InetUtils  - Cannot determine local hostname
+20:14:43.410 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [After]
+20:14:43.410 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Before]
+20:14:43.411 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Between]
+20:14:43.411 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Cookie]
+20:14:43.411 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Header]
+20:14:43.411 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Host]
+20:14:43.412 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Method]
+20:14:43.413 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Path]
+20:14:43.413 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Query]
+20:14:43.413 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [ReadBody]
+20:14:43.413 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [RemoteAddr]
+20:14:43.413 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Weight]
+20:14:43.413 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [CloudFoundryRouteService]
+20:14:44.820 [main] INFO  o.s.cloud.commons.util.InetUtils  - Cannot determine local hostname
+20:14:46.065 [main] INFO  o.s.cloud.commons.util.InetUtils  - Cannot determine local hostname
+20:14:46.163 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver  - Exposing 15 endpoint(s) beneath base path '/actuator'
+20:14:46.375 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration  - Eureka HTTP Client uses RestTemplate.
+20:14:46.433 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger  - Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+20:14:46.521 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory  - Setting initial instance status as: STARTING
+20:14:46.557 [main] INFO  c.netflix.discovery.DiscoveryClient  - Initializing Eureka in region us-east-1
+20:14:46.560 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
+20:14:46.589 [main] INFO  c.netflix.discovery.DiscoveryClient  - Disable delta property : false
+20:14:46.589 [main] INFO  c.netflix.discovery.DiscoveryClient  - Single vip registry refresh property : null
+20:14:46.589 [main] INFO  c.netflix.discovery.DiscoveryClient  - Force full registry fetch : false
+20:14:46.589 [main] INFO  c.netflix.discovery.DiscoveryClient  - Application is null : false
+20:14:46.589 [main] INFO  c.netflix.discovery.DiscoveryClient  - Registered Applications size is zero : true
+20:14:46.589 [main] INFO  c.netflix.discovery.DiscoveryClient  - Application version is -1: true
+20:14:46.589 [main] INFO  c.netflix.discovery.DiscoveryClient  - Getting all instance registry info from the eureka server
+20:14:47.002 [main] INFO  c.netflix.discovery.DiscoveryClient  - The response status is 200
+20:14:47.007 [main] INFO  c.netflix.discovery.DiscoveryClient  - Starting heartbeat executor: renew interval is: 30
+20:14:47.011 [main] INFO  c.n.discovery.InstanceInfoReplicator  - InstanceInfoReplicator onDemand update allowed rate per min is 4
+20:14:47.017 [main] INFO  c.netflix.discovery.DiscoveryClient  - Discovery Client initialized at timestamp 1628766887016 with initial instances count: 1
+20:14:47.018 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry  - Registering application GATEWAY-SERVICE with eureka with status UP
+20:14:47.019 [main] INFO  c.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1628766887019, current=UP, previous=STARTING]
+20:14:47.021 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient  - DiscoveryClient_GATEWAY-SERVICE/localhost:gateway-service:8602: registering service...
+20:14:47.067 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient  - DiscoveryClient_GATEWAY-SERVICE/localhost:gateway-service:8602 - registration status: 204
+20:14:47.079 [main] ERROR o.s.c.g.route.CachingRouteLocator  - Refresh routes error !!!
+java.lang.IllegalArgumentException: Unable to find GatewayFilterFactory with name AuthenticationFilter
+	at org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator.loadGatewayFilters(RouteDefinitionRouteLocator.java:130)
+	at org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator.getFilters(RouteDefinitionRouteLocator.java:176)
+	at org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator.convertToRoute(RouteDefinitionRouteLocator.java:117)
+	at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:106)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.tryEmitScalar(FluxFlatMap.java:488)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onNext(FluxFlatMap.java:421)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.drain(FluxMergeSequential.java:432)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.innerComplete(FluxMergeSequential.java:328)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialInner.onSubscribe(FluxMergeSequential.java:552)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+	at reactor.core.publisher.Flux.subscribe(Flux.java:8402)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.onNext(FluxMergeSequential.java:237)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:270)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:228)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.onSubscribe(FluxMergeSequential.java:198)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+	at reactor.core.publisher.Flux.subscribe(Flux.java:8402)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.onNext(FluxMergeSequential.java:237)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:270)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:228)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.onSubscribe(FluxMergeSequential.java:198)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4338)
+	at reactor.core.publisher.Mono.subscribeWith(Mono.java:4453)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4309)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4245)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4217)
+	at org.springframework.cloud.gateway.route.CachingRouteLocator.onApplicationEvent(CachingRouteLocator.java:81)
+	at org.springframework.cloud.gateway.route.CachingRouteLocator.onApplicationEvent(CachingRouteLocator.java:40)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:421)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378)
+	at org.springframework.cloud.gateway.route.RouteRefreshListener.reset(RouteRefreshListener.java:73)
+	at org.springframework.cloud.gateway.route.RouteRefreshListener.onApplicationEvent(RouteRefreshListener.java:54)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:421)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378)
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration.start(EurekaAutoServiceRegistration.java:85)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:178)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:356)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:155)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:123)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:935)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:64)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at kr.bunda.gateway.GatewayServiceApplication.main(GatewayServiceApplication.java:14)
+20:14:47.087 [main] WARN  o.s.b.w.r.c.AnnotationConfigReactiveWebServerApplicationContext  - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'eurekaAutoServiceRegistration'; nested exception is java.lang.IllegalArgumentException: Unable to find GatewayFilterFactory with name AuthenticationFilter
+20:14:47.099 [main] INFO  c.netflix.discovery.DiscoveryClient  - Shutting down DiscoveryClient ...
+20:14:50.106 [main] INFO  c.netflix.discovery.DiscoveryClient  - Unregistering ...
+20:14:50.112 [main] INFO  c.netflix.discovery.DiscoveryClient  - DiscoveryClient_GATEWAY-SERVICE/localhost:gateway-service:8602 - deregister  status: 200
+20:14:50.116 [main] INFO  c.netflix.discovery.DiscoveryClient  - Completed shut down of DiscoveryClient
+20:14:50.143 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener  - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+20:14:50.204 [main] ERROR o.s.boot.SpringApplication  - Application run failed
+org.springframework.context.ApplicationContextException: Failed to start bean 'eurekaAutoServiceRegistration'; nested exception is java.lang.IllegalArgumentException: Unable to find GatewayFilterFactory with name AuthenticationFilter
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:181)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:356)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:155)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:123)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:935)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:64)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at kr.bunda.gateway.GatewayServiceApplication.main(GatewayServiceApplication.java:14)
+Caused by: java.lang.IllegalArgumentException: Unable to find GatewayFilterFactory with name AuthenticationFilter
+	at org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator.loadGatewayFilters(RouteDefinitionRouteLocator.java:130)
+	at org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator.getFilters(RouteDefinitionRouteLocator.java:176)
+	at org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator.convertToRoute(RouteDefinitionRouteLocator.java:117)
+	at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:106)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.tryEmitScalar(FluxFlatMap.java:488)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onNext(FluxFlatMap.java:421)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.drain(FluxMergeSequential.java:432)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.innerComplete(FluxMergeSequential.java:328)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialInner.onSubscribe(FluxMergeSequential.java:552)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+	at reactor.core.publisher.Flux.subscribe(Flux.java:8402)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.onNext(FluxMergeSequential.java:237)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:270)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:228)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.onSubscribe(FluxMergeSequential.java:198)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+	at reactor.core.publisher.Flux.subscribe(Flux.java:8402)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.onNext(FluxMergeSequential.java:237)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:270)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:228)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.onSubscribe(FluxMergeSequential.java:198)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+	at reactor.core.publisher.InternalFluxOperator.subscribe(InternalFluxOperator.java:62)
+	at reactor.core.publisher.FluxDefer.subscribe(FluxDefer.java:54)
+	at reactor.core.publisher.Flux.subscribe(Flux.java:8402)
+	at reactor.core.publisher.Flux.blockLast(Flux.java:2643)
+	at org.springframework.cloud.gateway.filter.WeightCalculatorWebFilter.lambda$onApplicationEvent$0(WeightCalculatorWebFilter.java:133)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory$DependencyObjectProvider.ifAvailable(DefaultListableBeanFactory.java:2035)
+	at org.springframework.cloud.gateway.filter.WeightCalculatorWebFilter.onApplicationEvent(WeightCalculatorWebFilter.java:133)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:421)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378)
+	at org.springframework.cloud.gateway.route.RouteRefreshListener.reset(RouteRefreshListener.java:73)
+	at org.springframework.cloud.gateway.route.RouteRefreshListener.onApplicationEvent(RouteRefreshListener.java:54)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:421)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378)
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration.start(EurekaAutoServiceRegistration.java:85)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:178)
+	... 14 common frames omitted
+	Suppressed: java.lang.Exception: #block terminated with an error
+		at reactor.core.publisher.BlockingSingleSubscriber.blockingGet(BlockingSingleSubscriber.java:99)
+		at reactor.core.publisher.Flux.blockLast(Flux.java:2644)
+		... 31 common frames omitted
+20:25:22.258 [background-preinit] INFO  o.h.validator.internal.util.Version  - HV000001: Hibernate Validator 6.2.0.Final
+20:25:22.259 [main] INFO  k.b.g.GatewayServiceApplication  - Starting GatewayServiceApplication using Java 14 on DESKTOP-TGGJB9J with PID 37560 (G:\git\bunda\backend\gateway-service\target\classes started by kjhhj in G:\git\bunda\backend)
+20:25:22.262 [main] INFO  k.b.g.GatewayServiceApplication  - The following profiles are active: prod-eureka,common,eureka,router
+20:25:23.569 [main] INFO  o.s.cloud.context.scope.GenericScope  - BeanFactory id=0bc572f6-7546-3450-baf4-f767887f7d6d
+20:25:23.667 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20:25:23.669 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20:25:23.672 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  - Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20:25:25.453 [main] INFO  o.s.cloud.commons.util.InetUtils  - Cannot determine local hostname
+20:25:25.953 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [After]
+20:25:25.953 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Before]
+20:25:25.953 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Between]
+20:25:25.953 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Cookie]
+20:25:25.954 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Header]
+20:25:25.954 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Host]
+20:25:25.954 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Method]
+20:25:25.954 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Path]
+20:25:25.955 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Query]
+20:25:25.955 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [ReadBody]
+20:25:25.955 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [RemoteAddr]
+20:25:25.955 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Weight]
+20:25:25.955 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [CloudFoundryRouteService]
+20:25:27.363 [main] INFO  o.s.cloud.commons.util.InetUtils  - Cannot determine local hostname
+20:25:28.623 [main] INFO  o.s.cloud.commons.util.InetUtils  - Cannot determine local hostname
+20:25:28.736 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver  - Exposing 15 endpoint(s) beneath base path '/actuator'
+20:25:28.958 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration  - Eureka HTTP Client uses RestTemplate.
+20:25:29.043 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger  - Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+20:25:29.131 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory  - Setting initial instance status as: STARTING
+20:25:29.170 [main] INFO  c.netflix.discovery.DiscoveryClient  - Initializing Eureka in region us-east-1
+20:25:29.174 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
+20:25:29.196 [main] INFO  c.netflix.discovery.DiscoveryClient  - Disable delta property : false
+20:25:29.197 [main] INFO  c.netflix.discovery.DiscoveryClient  - Single vip registry refresh property : null
+20:25:29.197 [main] INFO  c.netflix.discovery.DiscoveryClient  - Force full registry fetch : false
+20:25:29.197 [main] INFO  c.netflix.discovery.DiscoveryClient  - Application is null : false
+20:25:29.197 [main] INFO  c.netflix.discovery.DiscoveryClient  - Registered Applications size is zero : true
+20:25:29.197 [main] INFO  c.netflix.discovery.DiscoveryClient  - Application version is -1: true
+20:25:29.197 [main] INFO  c.netflix.discovery.DiscoveryClient  - Getting all instance registry info from the eureka server
+20:25:29.612 [main] INFO  c.netflix.discovery.DiscoveryClient  - The response status is 200
+20:25:29.617 [main] INFO  c.netflix.discovery.DiscoveryClient  - Starting heartbeat executor: renew interval is: 30
+20:25:29.621 [main] INFO  c.n.discovery.InstanceInfoReplicator  - InstanceInfoReplicator onDemand update allowed rate per min is 4
+20:25:29.629 [main] INFO  c.netflix.discovery.DiscoveryClient  - Discovery Client initialized at timestamp 1628767529628 with initial instances count: 1
+20:25:29.630 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry  - Registering application GATEWAY-SERVICE with eureka with status UP
+20:25:29.631 [main] INFO  c.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1628767529631, current=UP, previous=STARTING]
+20:25:29.634 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient  - DiscoveryClient_GATEWAY-SERVICE/localhost:gateway-service:8602: registering service...
+20:25:29.681 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient  - DiscoveryClient_GATEWAY-SERVICE/localhost:gateway-service:8602 - registration status: 204
+20:25:29.697 [main] ERROR o.s.c.g.route.CachingRouteLocator  - Refresh routes error !!!
+java.lang.IllegalArgumentException: Unable to find GatewayFilterFactory with name AuthenticationFilter
+	at org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator.loadGatewayFilters(RouteDefinitionRouteLocator.java:130)
+	at org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator.getFilters(RouteDefinitionRouteLocator.java:176)
+	at org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator.convertToRoute(RouteDefinitionRouteLocator.java:117)
+	at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:106)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.tryEmitScalar(FluxFlatMap.java:488)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onNext(FluxFlatMap.java:421)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.drain(FluxMergeSequential.java:432)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.innerComplete(FluxMergeSequential.java:328)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialInner.onSubscribe(FluxMergeSequential.java:552)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+	at reactor.core.publisher.Flux.subscribe(Flux.java:8402)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.onNext(FluxMergeSequential.java:237)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:270)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:228)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.onSubscribe(FluxMergeSequential.java:198)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+	at reactor.core.publisher.Flux.subscribe(Flux.java:8402)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.onNext(FluxMergeSequential.java:237)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:270)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:228)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.onSubscribe(FluxMergeSequential.java:198)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4338)
+	at reactor.core.publisher.Mono.subscribeWith(Mono.java:4453)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4309)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4245)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4217)
+	at org.springframework.cloud.gateway.route.CachingRouteLocator.onApplicationEvent(CachingRouteLocator.java:81)
+	at org.springframework.cloud.gateway.route.CachingRouteLocator.onApplicationEvent(CachingRouteLocator.java:40)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:421)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378)
+	at org.springframework.cloud.gateway.route.RouteRefreshListener.reset(RouteRefreshListener.java:73)
+	at org.springframework.cloud.gateway.route.RouteRefreshListener.onApplicationEvent(RouteRefreshListener.java:54)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:421)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378)
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration.start(EurekaAutoServiceRegistration.java:85)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:178)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:356)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:155)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:123)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:935)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:64)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at kr.bunda.gateway.GatewayServiceApplication.main(GatewayServiceApplication.java:14)
+20:25:29.707 [main] WARN  o.s.b.w.r.c.AnnotationConfigReactiveWebServerApplicationContext  - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'eurekaAutoServiceRegistration'; nested exception is java.lang.IllegalArgumentException: Unable to find GatewayFilterFactory with name AuthenticationFilter
+20:25:29.720 [main] INFO  c.netflix.discovery.DiscoveryClient  - Shutting down DiscoveryClient ...
+20:25:32.728 [main] INFO  c.netflix.discovery.DiscoveryClient  - Unregistering ...
+20:25:32.733 [main] INFO  c.netflix.discovery.DiscoveryClient  - DiscoveryClient_GATEWAY-SERVICE/localhost:gateway-service:8602 - deregister  status: 200
+20:25:32.738 [main] INFO  c.netflix.discovery.DiscoveryClient  - Completed shut down of DiscoveryClient
+20:25:32.755 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener  - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+20:25:32.776 [main] ERROR o.s.boot.SpringApplication  - Application run failed
+org.springframework.context.ApplicationContextException: Failed to start bean 'eurekaAutoServiceRegistration'; nested exception is java.lang.IllegalArgumentException: Unable to find GatewayFilterFactory with name AuthenticationFilter
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:181)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:356)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:155)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:123)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:935)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:64)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at kr.bunda.gateway.GatewayServiceApplication.main(GatewayServiceApplication.java:14)
+Caused by: java.lang.IllegalArgumentException: Unable to find GatewayFilterFactory with name AuthenticationFilter
+	at org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator.loadGatewayFilters(RouteDefinitionRouteLocator.java:130)
+	at org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator.getFilters(RouteDefinitionRouteLocator.java:176)
+	at org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator.convertToRoute(RouteDefinitionRouteLocator.java:117)
+	at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:106)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.tryEmitScalar(FluxFlatMap.java:488)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onNext(FluxFlatMap.java:421)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.drain(FluxMergeSequential.java:432)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.innerComplete(FluxMergeSequential.java:328)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialInner.onSubscribe(FluxMergeSequential.java:552)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+	at reactor.core.publisher.Flux.subscribe(Flux.java:8402)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.onNext(FluxMergeSequential.java:237)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:270)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:228)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.onSubscribe(FluxMergeSequential.java:198)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+	at reactor.core.publisher.Flux.subscribe(Flux.java:8402)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.onNext(FluxMergeSequential.java:237)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:270)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:228)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.onSubscribe(FluxMergeSequential.java:198)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+	at reactor.core.publisher.InternalFluxOperator.subscribe(InternalFluxOperator.java:62)
+	at reactor.core.publisher.FluxDefer.subscribe(FluxDefer.java:54)
+	at reactor.core.publisher.Flux.subscribe(Flux.java:8402)
+	at reactor.core.publisher.Flux.blockLast(Flux.java:2643)
+	at org.springframework.cloud.gateway.filter.WeightCalculatorWebFilter.lambda$onApplicationEvent$0(WeightCalculatorWebFilter.java:133)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory$DependencyObjectProvider.ifAvailable(DefaultListableBeanFactory.java:2035)
+	at org.springframework.cloud.gateway.filter.WeightCalculatorWebFilter.onApplicationEvent(WeightCalculatorWebFilter.java:133)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:421)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378)
+	at org.springframework.cloud.gateway.route.RouteRefreshListener.reset(RouteRefreshListener.java:73)
+	at org.springframework.cloud.gateway.route.RouteRefreshListener.onApplicationEvent(RouteRefreshListener.java:54)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:421)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378)
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration.start(EurekaAutoServiceRegistration.java:85)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:178)
+	... 14 common frames omitted
+	Suppressed: java.lang.Exception: #block terminated with an error
+		at reactor.core.publisher.BlockingSingleSubscriber.blockingGet(BlockingSingleSubscriber.java:99)
+		at reactor.core.publisher.Flux.blockLast(Flux.java:2644)
+		... 31 common frames omitted
+20:26:24.042 [background-preinit] INFO  o.h.validator.internal.util.Version  - HV000001: Hibernate Validator 6.2.0.Final
+20:26:24.042 [main] INFO  k.b.g.GatewayServiceApplication  - Starting GatewayServiceApplication using Java 14 on DESKTOP-TGGJB9J with PID 43800 (G:\git\bunda\backend\gateway-service\target\classes started by kjhhj in G:\git\bunda\backend)
+20:26:24.045 [main] INFO  k.b.g.GatewayServiceApplication  - The following profiles are active: prod-eureka,common,eureka,router
+20:26:25.271 [main] INFO  o.s.cloud.context.scope.GenericScope  - BeanFactory id=0bc572f6-7546-3450-baf4-f767887f7d6d
+20:26:25.395 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20:26:25.398 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20:26:25.402 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  - Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20:26:27.140 [main] INFO  o.s.cloud.commons.util.InetUtils  - Cannot determine local hostname
+20:26:27.616 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [After]
+20:26:27.616 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Before]
+20:26:27.616 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Between]
+20:26:27.616 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Cookie]
+20:26:27.617 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Header]
+20:26:27.617 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Host]
+20:26:27.617 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Method]
+20:26:27.617 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Path]
+20:26:27.617 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Query]
+20:26:27.618 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [ReadBody]
+20:26:27.618 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [RemoteAddr]
+20:26:27.619 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Weight]
+20:26:27.619 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [CloudFoundryRouteService]
+20:26:29.045 [main] INFO  o.s.cloud.commons.util.InetUtils  - Cannot determine local hostname
+20:26:30.291 [main] INFO  o.s.cloud.commons.util.InetUtils  - Cannot determine local hostname
+20:26:30.398 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver  - Exposing 15 endpoint(s) beneath base path '/actuator'
+20:26:30.592 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration  - Eureka HTTP Client uses RestTemplate.
+20:26:30.647 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger  - Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+20:26:30.728 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory  - Setting initial instance status as: STARTING
+20:26:30.780 [main] INFO  c.netflix.discovery.DiscoveryClient  - Initializing Eureka in region us-east-1
+20:26:30.784 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
+20:26:30.805 [main] INFO  c.netflix.discovery.DiscoveryClient  - Disable delta property : false
+20:26:30.805 [main] INFO  c.netflix.discovery.DiscoveryClient  - Single vip registry refresh property : null
+20:26:30.806 [main] INFO  c.netflix.discovery.DiscoveryClient  - Force full registry fetch : false
+20:26:30.806 [main] INFO  c.netflix.discovery.DiscoveryClient  - Application is null : false
+20:26:30.806 [main] INFO  c.netflix.discovery.DiscoveryClient  - Registered Applications size is zero : true
+20:26:30.806 [main] INFO  c.netflix.discovery.DiscoveryClient  - Application version is -1: true
+20:26:30.806 [main] INFO  c.netflix.discovery.DiscoveryClient  - Getting all instance registry info from the eureka server
+20:26:31.172 [main] INFO  c.netflix.discovery.DiscoveryClient  - The response status is 200
+20:26:31.174 [main] INFO  c.netflix.discovery.DiscoveryClient  - Starting heartbeat executor: renew interval is: 30
+20:26:31.177 [main] INFO  c.n.discovery.InstanceInfoReplicator  - InstanceInfoReplicator onDemand update allowed rate per min is 4
+20:26:31.183 [main] INFO  c.netflix.discovery.DiscoveryClient  - Discovery Client initialized at timestamp 1628767591182 with initial instances count: 1
+20:26:31.184 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry  - Registering application GATEWAY-SERVICE with eureka with status UP
+20:26:31.184 [main] INFO  c.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1628767591184, current=UP, previous=STARTING]
+20:26:31.186 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient  - DiscoveryClient_GATEWAY-SERVICE/localhost:gateway-service:8602: registering service...
+20:26:31.237 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient  - DiscoveryClient_GATEWAY-SERVICE/localhost:gateway-service:8602 - registration status: 204
+20:26:31.259 [main] ERROR o.s.c.g.route.CachingRouteLocator  - Refresh routes error !!!
+java.lang.ClassCastException: class java.lang.Object cannot be cast to class kr.bunda.gateway.filter.AuthenticationFilterFactory$Config (java.lang.Object is in module java.base of loader 'bootstrap'; kr.bunda.gateway.filter.AuthenticationFilterFactory$Config is in unnamed module of loader 'app')
+	at kr.bunda.gateway.filter.AuthenticationFilterFactory.apply(AuthenticationFilterFactory.java:27)
+	at org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator.loadGatewayFilters(RouteDefinitionRouteLocator.java:154)
+	at org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator.getFilters(RouteDefinitionRouteLocator.java:176)
+	at org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator.convertToRoute(RouteDefinitionRouteLocator.java:117)
+	at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:106)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.tryEmitScalar(FluxFlatMap.java:488)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onNext(FluxFlatMap.java:421)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.drain(FluxMergeSequential.java:432)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.innerComplete(FluxMergeSequential.java:328)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialInner.onSubscribe(FluxMergeSequential.java:552)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+	at reactor.core.publisher.Flux.subscribe(Flux.java:8402)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.onNext(FluxMergeSequential.java:237)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:270)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:228)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.onSubscribe(FluxMergeSequential.java:198)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+	at reactor.core.publisher.Flux.subscribe(Flux.java:8402)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.onNext(FluxMergeSequential.java:237)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:270)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:228)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.onSubscribe(FluxMergeSequential.java:198)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4338)
+	at reactor.core.publisher.Mono.subscribeWith(Mono.java:4453)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4309)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4245)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4217)
+	at org.springframework.cloud.gateway.route.CachingRouteLocator.onApplicationEvent(CachingRouteLocator.java:81)
+	at org.springframework.cloud.gateway.route.CachingRouteLocator.onApplicationEvent(CachingRouteLocator.java:40)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:421)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378)
+	at org.springframework.cloud.gateway.route.RouteRefreshListener.reset(RouteRefreshListener.java:73)
+	at org.springframework.cloud.gateway.route.RouteRefreshListener.onApplicationEvent(RouteRefreshListener.java:54)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:421)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378)
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration.start(EurekaAutoServiceRegistration.java:85)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:178)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:356)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:155)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:123)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:935)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:64)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at kr.bunda.gateway.GatewayServiceApplication.main(GatewayServiceApplication.java:14)
+20:26:31.266 [main] WARN  o.s.b.w.r.c.AnnotationConfigReactiveWebServerApplicationContext  - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'eurekaAutoServiceRegistration'; nested exception is java.lang.ClassCastException: class java.lang.Object cannot be cast to class kr.bunda.gateway.filter.AuthenticationFilterFactory$Config (java.lang.Object is in module java.base of loader 'bootstrap'; kr.bunda.gateway.filter.AuthenticationFilterFactory$Config is in unnamed module of loader 'app')
+20:26:31.303 [main] INFO  c.netflix.discovery.DiscoveryClient  - Shutting down DiscoveryClient ...
+20:26:34.306 [main] INFO  c.netflix.discovery.DiscoveryClient  - Unregistering ...
+20:26:34.311 [main] INFO  c.netflix.discovery.DiscoveryClient  - DiscoveryClient_GATEWAY-SERVICE/localhost:gateway-service:8602 - deregister  status: 200
+20:26:34.315 [main] INFO  c.netflix.discovery.DiscoveryClient  - Completed shut down of DiscoveryClient
+20:26:34.335 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener  - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+20:26:34.354 [main] ERROR o.s.boot.SpringApplication  - Application run failed
+org.springframework.context.ApplicationContextException: Failed to start bean 'eurekaAutoServiceRegistration'; nested exception is java.lang.ClassCastException: class java.lang.Object cannot be cast to class kr.bunda.gateway.filter.AuthenticationFilterFactory$Config (java.lang.Object is in module java.base of loader 'bootstrap'; kr.bunda.gateway.filter.AuthenticationFilterFactory$Config is in unnamed module of loader 'app')
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:181)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:356)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:155)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:123)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:935)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:64)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at kr.bunda.gateway.GatewayServiceApplication.main(GatewayServiceApplication.java:14)
+Caused by: java.lang.ClassCastException: class java.lang.Object cannot be cast to class kr.bunda.gateway.filter.AuthenticationFilterFactory$Config (java.lang.Object is in module java.base of loader 'bootstrap'; kr.bunda.gateway.filter.AuthenticationFilterFactory$Config is in unnamed module of loader 'app')
+	at kr.bunda.gateway.filter.AuthenticationFilterFactory.apply(AuthenticationFilterFactory.java:27)
+	at org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator.loadGatewayFilters(RouteDefinitionRouteLocator.java:154)
+	at org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator.getFilters(RouteDefinitionRouteLocator.java:176)
+	at org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator.convertToRoute(RouteDefinitionRouteLocator.java:117)
+	at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:106)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.tryEmitScalar(FluxFlatMap.java:488)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onNext(FluxFlatMap.java:421)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.drain(FluxMergeSequential.java:432)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.innerComplete(FluxMergeSequential.java:328)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialInner.onSubscribe(FluxMergeSequential.java:552)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+	at reactor.core.publisher.Flux.subscribe(Flux.java:8402)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.onNext(FluxMergeSequential.java:237)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:270)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:228)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.onSubscribe(FluxMergeSequential.java:198)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+	at reactor.core.publisher.Flux.subscribe(Flux.java:8402)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.onNext(FluxMergeSequential.java:237)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:270)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:228)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.onSubscribe(FluxMergeSequential.java:198)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+	at reactor.core.publisher.InternalFluxOperator.subscribe(InternalFluxOperator.java:62)
+	at reactor.core.publisher.FluxDefer.subscribe(FluxDefer.java:54)
+	at reactor.core.publisher.Flux.subscribe(Flux.java:8402)
+	at reactor.core.publisher.Flux.blockLast(Flux.java:2643)
+	at org.springframework.cloud.gateway.filter.WeightCalculatorWebFilter.lambda$onApplicationEvent$0(WeightCalculatorWebFilter.java:133)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory$DependencyObjectProvider.ifAvailable(DefaultListableBeanFactory.java:2035)
+	at org.springframework.cloud.gateway.filter.WeightCalculatorWebFilter.onApplicationEvent(WeightCalculatorWebFilter.java:133)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:421)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378)
+	at org.springframework.cloud.gateway.route.RouteRefreshListener.reset(RouteRefreshListener.java:73)
+	at org.springframework.cloud.gateway.route.RouteRefreshListener.onApplicationEvent(RouteRefreshListener.java:54)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:421)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378)
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration.start(EurekaAutoServiceRegistration.java:85)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:178)
+	... 14 common frames omitted
+	Suppressed: java.lang.Exception: #block terminated with an error
+		at reactor.core.publisher.BlockingSingleSubscriber.blockingGet(BlockingSingleSubscriber.java:99)
+		at reactor.core.publisher.Flux.blockLast(Flux.java:2644)
+		... 31 common frames omitted
+20:27:05.520 [background-preinit] INFO  o.h.validator.internal.util.Version  - HV000001: Hibernate Validator 6.2.0.Final
+20:27:05.525 [main] INFO  k.b.g.GatewayServiceApplication  - Starting GatewayServiceApplication using Java 14 on DESKTOP-TGGJB9J with PID 25064 (G:\git\bunda\backend\gateway-service\target\classes started by kjhhj in G:\git\bunda\backend)
+20:27:05.526 [main] INFO  k.b.g.GatewayServiceApplication  - The following profiles are active: prod-eureka,common,eureka,router
+20:27:06.804 [main] INFO  o.s.cloud.context.scope.GenericScope  - BeanFactory id=0bc572f6-7546-3450-baf4-f767887f7d6d
+20:27:06.908 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20:27:06.909 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20:27:06.911 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  - Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20:27:08.691 [main] INFO  o.s.cloud.commons.util.InetUtils  - Cannot determine local hostname
+20:27:09.157 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [After]
+20:27:09.157 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Before]
+20:27:09.157 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Between]
+20:27:09.157 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Cookie]
+20:27:09.157 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Header]
+20:27:09.157 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Host]
+20:27:09.157 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Method]
+20:27:09.157 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Path]
+20:27:09.157 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Query]
+20:27:09.158 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [ReadBody]
+20:27:09.158 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [RemoteAddr]
+20:27:09.159 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Weight]
+20:27:09.159 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [CloudFoundryRouteService]
+20:27:10.573 [main] INFO  o.s.cloud.commons.util.InetUtils  - Cannot determine local hostname
+20:27:11.832 [main] INFO  o.s.cloud.commons.util.InetUtils  - Cannot determine local hostname
+20:27:11.932 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver  - Exposing 15 endpoint(s) beneath base path '/actuator'
+20:27:12.110 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration  - Eureka HTTP Client uses RestTemplate.
+20:27:12.163 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger  - Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+20:27:12.235 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory  - Setting initial instance status as: STARTING
+20:27:12.273 [main] INFO  c.netflix.discovery.DiscoveryClient  - Initializing Eureka in region us-east-1
+20:27:12.277 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
+20:27:12.297 [main] INFO  c.netflix.discovery.DiscoveryClient  - Disable delta property : false
+20:27:12.297 [main] INFO  c.netflix.discovery.DiscoveryClient  - Single vip registry refresh property : null
+20:27:12.297 [main] INFO  c.netflix.discovery.DiscoveryClient  - Force full registry fetch : false
+20:27:12.298 [main] INFO  c.netflix.discovery.DiscoveryClient  - Application is null : false
+20:27:12.298 [main] INFO  c.netflix.discovery.DiscoveryClient  - Registered Applications size is zero : true
+20:27:12.298 [main] INFO  c.netflix.discovery.DiscoveryClient  - Application version is -1: true
+20:27:12.298 [main] INFO  c.netflix.discovery.DiscoveryClient  - Getting all instance registry info from the eureka server
+20:27:12.744 [main] INFO  c.netflix.discovery.DiscoveryClient  - The response status is 200
+20:27:12.747 [main] INFO  c.netflix.discovery.DiscoveryClient  - Starting heartbeat executor: renew interval is: 30
+20:27:12.749 [main] INFO  c.n.discovery.InstanceInfoReplicator  - InstanceInfoReplicator onDemand update allowed rate per min is 4
+20:27:12.757 [main] INFO  c.netflix.discovery.DiscoveryClient  - Discovery Client initialized at timestamp 1628767632755 with initial instances count: 1
+20:27:12.759 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry  - Registering application GATEWAY-SERVICE with eureka with status UP
+20:27:12.760 [main] INFO  c.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1628767632760, current=UP, previous=STARTING]
+20:27:12.762 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient  - DiscoveryClient_GATEWAY-SERVICE/localhost:gateway-service:8602: registering service...
+20:27:12.805 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient  - DiscoveryClient_GATEWAY-SERVICE/localhost:gateway-service:8602 - registration status: 204
+20:27:12.819 [main] ERROR o.s.c.g.route.CachingRouteLocator  - Refresh routes error !!!
+java.lang.ClassCastException: class java.lang.Object cannot be cast to class kr.bunda.gateway.filter.AuthenticationFilterFactory$Config (java.lang.Object is in module java.base of loader 'bootstrap'; kr.bunda.gateway.filter.AuthenticationFilterFactory$Config is in unnamed module of loader 'app')
+	at kr.bunda.gateway.filter.AuthenticationFilterFactory.apply(AuthenticationFilterFactory.java:27)
+	at org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator.loadGatewayFilters(RouteDefinitionRouteLocator.java:154)
+	at org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator.getFilters(RouteDefinitionRouteLocator.java:176)
+	at org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator.convertToRoute(RouteDefinitionRouteLocator.java:117)
+	at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:106)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.tryEmitScalar(FluxFlatMap.java:488)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onNext(FluxFlatMap.java:421)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.drain(FluxMergeSequential.java:432)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.innerComplete(FluxMergeSequential.java:328)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialInner.onSubscribe(FluxMergeSequential.java:552)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+	at reactor.core.publisher.Flux.subscribe(Flux.java:8402)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.onNext(FluxMergeSequential.java:237)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:270)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:228)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.onSubscribe(FluxMergeSequential.java:198)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+	at reactor.core.publisher.Flux.subscribe(Flux.java:8402)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.onNext(FluxMergeSequential.java:237)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:270)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:228)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.onSubscribe(FluxMergeSequential.java:198)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4338)
+	at reactor.core.publisher.Mono.subscribeWith(Mono.java:4453)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4309)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4245)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4217)
+	at org.springframework.cloud.gateway.route.CachingRouteLocator.onApplicationEvent(CachingRouteLocator.java:81)
+	at org.springframework.cloud.gateway.route.CachingRouteLocator.onApplicationEvent(CachingRouteLocator.java:40)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:421)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378)
+	at org.springframework.cloud.gateway.route.RouteRefreshListener.reset(RouteRefreshListener.java:73)
+	at org.springframework.cloud.gateway.route.RouteRefreshListener.onApplicationEvent(RouteRefreshListener.java:54)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:421)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378)
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration.start(EurekaAutoServiceRegistration.java:85)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:178)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:356)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:155)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:123)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:935)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:64)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at kr.bunda.gateway.GatewayServiceApplication.main(GatewayServiceApplication.java:14)
+20:27:12.827 [main] WARN  o.s.b.w.r.c.AnnotationConfigReactiveWebServerApplicationContext  - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'eurekaAutoServiceRegistration'; nested exception is java.lang.ClassCastException: class java.lang.Object cannot be cast to class kr.bunda.gateway.filter.AuthenticationFilterFactory$Config (java.lang.Object is in module java.base of loader 'bootstrap'; kr.bunda.gateway.filter.AuthenticationFilterFactory$Config is in unnamed module of loader 'app')
+20:27:12.838 [main] INFO  c.netflix.discovery.DiscoveryClient  - Shutting down DiscoveryClient ...
+20:27:15.849 [main] INFO  c.netflix.discovery.DiscoveryClient  - Unregistering ...
+20:27:15.855 [main] INFO  c.netflix.discovery.DiscoveryClient  - DiscoveryClient_GATEWAY-SERVICE/localhost:gateway-service:8602 - deregister  status: 200
+20:27:15.860 [main] INFO  c.netflix.discovery.DiscoveryClient  - Completed shut down of DiscoveryClient
+20:27:15.878 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener  - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+20:27:15.897 [main] ERROR o.s.boot.SpringApplication  - Application run failed
+org.springframework.context.ApplicationContextException: Failed to start bean 'eurekaAutoServiceRegistration'; nested exception is java.lang.ClassCastException: class java.lang.Object cannot be cast to class kr.bunda.gateway.filter.AuthenticationFilterFactory$Config (java.lang.Object is in module java.base of loader 'bootstrap'; kr.bunda.gateway.filter.AuthenticationFilterFactory$Config is in unnamed module of loader 'app')
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:181)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:356)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:155)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:123)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:935)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:64)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at kr.bunda.gateway.GatewayServiceApplication.main(GatewayServiceApplication.java:14)
+Caused by: java.lang.ClassCastException: class java.lang.Object cannot be cast to class kr.bunda.gateway.filter.AuthenticationFilterFactory$Config (java.lang.Object is in module java.base of loader 'bootstrap'; kr.bunda.gateway.filter.AuthenticationFilterFactory$Config is in unnamed module of loader 'app')
+	at kr.bunda.gateway.filter.AuthenticationFilterFactory.apply(AuthenticationFilterFactory.java:27)
+	at org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator.loadGatewayFilters(RouteDefinitionRouteLocator.java:154)
+	at org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator.getFilters(RouteDefinitionRouteLocator.java:176)
+	at org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator.convertToRoute(RouteDefinitionRouteLocator.java:117)
+	at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:106)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.tryEmitScalar(FluxFlatMap.java:488)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onNext(FluxFlatMap.java:421)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.drain(FluxMergeSequential.java:432)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.innerComplete(FluxMergeSequential.java:328)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialInner.onSubscribe(FluxMergeSequential.java:552)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+	at reactor.core.publisher.Flux.subscribe(Flux.java:8402)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.onNext(FluxMergeSequential.java:237)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:270)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:228)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.onSubscribe(FluxMergeSequential.java:198)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+	at reactor.core.publisher.Flux.subscribe(Flux.java:8402)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.onNext(FluxMergeSequential.java:237)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:270)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:228)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.onSubscribe(FluxMergeSequential.java:198)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+	at reactor.core.publisher.InternalFluxOperator.subscribe(InternalFluxOperator.java:62)
+	at reactor.core.publisher.FluxDefer.subscribe(FluxDefer.java:54)
+	at reactor.core.publisher.Flux.subscribe(Flux.java:8402)
+	at reactor.core.publisher.Flux.blockLast(Flux.java:2643)
+	at org.springframework.cloud.gateway.filter.WeightCalculatorWebFilter.lambda$onApplicationEvent$0(WeightCalculatorWebFilter.java:133)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory$DependencyObjectProvider.ifAvailable(DefaultListableBeanFactory.java:2035)
+	at org.springframework.cloud.gateway.filter.WeightCalculatorWebFilter.onApplicationEvent(WeightCalculatorWebFilter.java:133)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:421)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378)
+	at org.springframework.cloud.gateway.route.RouteRefreshListener.reset(RouteRefreshListener.java:73)
+	at org.springframework.cloud.gateway.route.RouteRefreshListener.onApplicationEvent(RouteRefreshListener.java:54)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:421)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378)
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration.start(EurekaAutoServiceRegistration.java:85)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:178)
+	... 14 common frames omitted
+	Suppressed: java.lang.Exception: #block terminated with an error
+		at reactor.core.publisher.BlockingSingleSubscriber.blockingGet(BlockingSingleSubscriber.java:99)
+		at reactor.core.publisher.Flux.blockLast(Flux.java:2644)
+		... 31 common frames omitted
+20:29:56.599 [background-preinit] INFO  o.h.validator.internal.util.Version  - HV000001: Hibernate Validator 6.2.0.Final
+20:29:56.605 [main] INFO  k.b.g.GatewayServiceApplication  - Starting GatewayServiceApplication using Java 14 on DESKTOP-TGGJB9J with PID 20464 (G:\git\bunda\backend\gateway-service\target\classes started by kjhhj in G:\git\bunda\backend)
+20:29:56.606 [main] INFO  k.b.g.GatewayServiceApplication  - The following profiles are active: prod-eureka,common,eureka,router
+20:29:57.886 [main] INFO  o.s.cloud.context.scope.GenericScope  - BeanFactory id=0bc572f6-7546-3450-baf4-f767887f7d6d
+20:29:57.969 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20:29:57.971 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20:29:57.973 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  - Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20:30:28.272 [main] INFO  o.s.cloud.commons.util.InetUtils  - Cannot determine local hostname
+20:30:28.745 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [After]
+20:30:28.745 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Before]
+20:30:28.745 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Between]
+20:30:28.745 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Cookie]
+20:30:28.746 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Header]
+20:30:28.746 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Host]
+20:30:28.746 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Method]
+20:30:28.746 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Path]
+20:30:28.746 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Query]
+20:30:28.746 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [ReadBody]
+20:30:28.747 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [RemoteAddr]
+20:30:28.747 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Weight]
+20:30:28.747 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [CloudFoundryRouteService]
+20:30:30.133 [main] INFO  o.s.cloud.commons.util.InetUtils  - Cannot determine local hostname
+20:30:31.497 [main] INFO  o.s.cloud.commons.util.InetUtils  - Cannot determine local hostname
+20:30:31.598 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver  - Exposing 15 endpoint(s) beneath base path '/actuator'
+20:30:31.815 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration  - Eureka HTTP Client uses RestTemplate.
+20:30:31.902 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger  - Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+20:30:32.026 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory  - Setting initial instance status as: STARTING
+20:30:32.068 [main] INFO  c.netflix.discovery.DiscoveryClient  - Initializing Eureka in region us-east-1
+20:30:32.074 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
+20:30:32.098 [main] INFO  c.netflix.discovery.DiscoveryClient  - Disable delta property : false
+20:30:32.098 [main] INFO  c.netflix.discovery.DiscoveryClient  - Single vip registry refresh property : null
+20:30:32.099 [main] INFO  c.netflix.discovery.DiscoveryClient  - Force full registry fetch : false
+20:30:32.099 [main] INFO  c.netflix.discovery.DiscoveryClient  - Application is null : false
+20:30:32.099 [main] INFO  c.netflix.discovery.DiscoveryClient  - Registered Applications size is zero : true
+20:30:32.099 [main] INFO  c.netflix.discovery.DiscoveryClient  - Application version is -1: true
+20:30:32.099 [main] INFO  c.netflix.discovery.DiscoveryClient  - Getting all instance registry info from the eureka server
+20:30:32.503 [main] INFO  c.netflix.discovery.DiscoveryClient  - The response status is 200
+20:30:32.506 [main] INFO  c.netflix.discovery.DiscoveryClient  - Starting heartbeat executor: renew interval is: 30
+20:30:32.509 [main] INFO  c.n.discovery.InstanceInfoReplicator  - InstanceInfoReplicator onDemand update allowed rate per min is 4
+20:30:32.515 [main] INFO  c.netflix.discovery.DiscoveryClient  - Discovery Client initialized at timestamp 1628767832514 with initial instances count: 1
+20:30:32.517 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry  - Registering application GATEWAY-SERVICE with eureka with status UP
+20:30:32.517 [main] INFO  c.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1628767832517, current=UP, previous=STARTING]
+20:30:32.520 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient  - DiscoveryClient_GATEWAY-SERVICE/localhost:gateway-service:8602: registering service...
+20:30:32.567 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient  - DiscoveryClient_GATEWAY-SERVICE/localhost:gateway-service:8602 - registration status: 204
+20:30:32.580 [main] ERROR o.s.c.g.route.CachingRouteLocator  - Refresh routes error !!!
+java.lang.ClassCastException: class java.lang.Object cannot be cast to class kr.bunda.gateway.filter.AuthenticationFilterFactory$Config (java.lang.Object is in module java.base of loader 'bootstrap'; kr.bunda.gateway.filter.AuthenticationFilterFactory$Config is in unnamed module of loader 'app')
+	at kr.bunda.gateway.filter.AuthenticationFilterFactory.apply(AuthenticationFilterFactory.java:27)
+	at org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator.loadGatewayFilters(RouteDefinitionRouteLocator.java:154)
+	at org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator.getFilters(RouteDefinitionRouteLocator.java:176)
+	at org.springframework.cloud.gateway.route.RouteDefinitionRouteLocator.convertToRoute(RouteDefinitionRouteLocator.java:117)
+	at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:106)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.tryEmitScalar(FluxFlatMap.java:488)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onNext(FluxFlatMap.java:421)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.drain(FluxMergeSequential.java:432)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.innerComplete(FluxMergeSequential.java:328)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialInner.onSubscribe(FluxMergeSequential.java:552)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+	at reactor.core.publisher.Flux.subscribe(Flux.java:8402)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.onNext(FluxMergeSequential.java:237)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:270)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:228)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.onSubscribe(FluxMergeSequential.java:198)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+	at reactor.core.publisher.Flux.subscribe(Flux.java:8402)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.onNext(FluxMergeSequential.java:237)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:270)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:228)
+	at reactor.core.publisher.FluxMergeSequential$MergeSequentialMain.onSubscribe(FluxMergeSequential.java:198)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:164)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:86)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4338)
+	at reactor.core.publisher.Mono.subscribeWith(Mono.java:4453)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4309)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4245)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4217)
+	at org.springframework.cloud.gateway.route.CachingRouteLocator.onApplicationEvent(CachingRouteLocator.java:81)
+	at org.springframework.cloud.gateway.route.CachingRouteLocator.onApplicationEvent(CachingRouteLocator.java:40)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:421)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378)
+	at org.springframework.cloud.gateway.route.RouteRefreshListener.reset(RouteRefreshListener.java:73)
+	at org.springframework.cloud.gateway.route.RouteRefreshListener.onApplicationEvent(RouteRefreshListener.java:54)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:421)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378)
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration.start(EurekaAutoServiceRegistration.java:85)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:178)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:356)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:155)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:123)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:935)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:64)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at kr.bunda.gateway.GatewayServiceApplication.main(GatewayServiceApplication.java:14)
+20:30:32.591 [main] WARN  o.s.b.w.r.c.AnnotationConfigReactiveWebServerApplicationContext  - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'eurekaAutoServiceRegistration'; nested exception is java.lang.ClassCastException: class java.lang.Object cannot be cast to class kr.bunda.gateway.filter.AuthenticationFilterFactory$Config (java.lang.Object is in module java.base of loader 'bootstrap'; kr.bunda.gateway.filter.AuthenticationFilterFactory$Config is in unnamed module of loader 'app')
+20:30:32.607 [main] INFO  c.netflix.discovery.DiscoveryClient  - Shutting down DiscoveryClient ...
+20:30:35.622 [main] INFO  c.netflix.discovery.DiscoveryClient  - Unregistering ...
+20:30:35.627 [main] INFO  c.netflix.discovery.DiscoveryClient  - DiscoveryClient_GATEWAY-SERVICE/localhost:gateway-service:8602 - deregister  status: 200
+20:30:35.632 [main] INFO  c.netflix.discovery.DiscoveryClient  - Completed shut down of DiscoveryClient
+20:30:44.575 [background-preinit] INFO  o.h.validator.internal.util.Version  - HV000001: Hibernate Validator 6.2.0.Final
+20:30:44.578 [main] INFO  k.b.g.GatewayServiceApplication  - Starting GatewayServiceApplication using Java 14 on DESKTOP-TGGJB9J with PID 31088 (G:\git\bunda\backend\gateway-service\target\classes started by kjhhj in G:\git\bunda\backend)
+20:30:44.580 [main] INFO  k.b.g.GatewayServiceApplication  - The following profiles are active: prod-eureka,common,eureka,router
+20:30:45.906 [main] INFO  o.s.cloud.context.scope.GenericScope  - BeanFactory id=0bc572f6-7546-3450-baf4-f767887f7d6d
+20:30:46.016 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20:30:46.017 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20:30:46.020 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  - Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20:30:51.524 [main] INFO  o.s.cloud.commons.util.InetUtils  - Cannot determine local hostname
+20:30:52.003 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [After]
+20:30:52.003 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Before]
+20:30:52.003 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Between]
+20:30:52.003 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Cookie]
+20:30:52.005 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Header]
+20:30:52.005 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Host]
+20:30:52.005 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Method]
+20:30:52.005 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Path]
+20:30:52.005 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Query]
+20:30:52.005 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [ReadBody]
+20:30:52.005 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [RemoteAddr]
+20:30:52.005 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Weight]
+20:30:52.005 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [CloudFoundryRouteService]
+20:30:53.478 [main] INFO  o.s.cloud.commons.util.InetUtils  - Cannot determine local hostname
+20:30:54.732 [main] INFO  o.s.cloud.commons.util.InetUtils  - Cannot determine local hostname
+20:30:54.834 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver  - Exposing 15 endpoint(s) beneath base path '/actuator'
+20:30:55.055 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration  - Eureka HTTP Client uses RestTemplate.
+20:30:55.128 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger  - Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+20:30:55.196 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory  - Setting initial instance status as: STARTING
+20:30:55.238 [main] INFO  c.netflix.discovery.DiscoveryClient  - Initializing Eureka in region us-east-1
+20:30:55.243 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
+20:30:55.265 [main] INFO  c.netflix.discovery.DiscoveryClient  - Disable delta property : false
+20:30:55.266 [main] INFO  c.netflix.discovery.DiscoveryClient  - Single vip registry refresh property : null
+20:30:55.266 [main] INFO  c.netflix.discovery.DiscoveryClient  - Force full registry fetch : false
+20:30:55.266 [main] INFO  c.netflix.discovery.DiscoveryClient  - Application is null : false
+20:30:55.266 [main] INFO  c.netflix.discovery.DiscoveryClient  - Registered Applications size is zero : true
+20:30:55.266 [main] INFO  c.netflix.discovery.DiscoveryClient  - Application version is -1: true
+20:30:55.266 [main] INFO  c.netflix.discovery.DiscoveryClient  - Getting all instance registry info from the eureka server
+20:30:55.711 [main] INFO  c.netflix.discovery.DiscoveryClient  - The response status is 200
+20:30:55.721 [main] INFO  c.netflix.discovery.DiscoveryClient  - Starting heartbeat executor: renew interval is: 30
+20:30:55.750 [main] INFO  c.n.discovery.InstanceInfoReplicator  - InstanceInfoReplicator onDemand update allowed rate per min is 4
+20:30:55.755 [main] INFO  c.netflix.discovery.DiscoveryClient  - Discovery Client initialized at timestamp 1628767855754 with initial instances count: 1
+20:30:55.756 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry  - Registering application GATEWAY-SERVICE with eureka with status UP
+20:30:55.756 [main] INFO  c.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1628767855756, current=UP, previous=STARTING]
+20:30:55.758 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient  - DiscoveryClient_GATEWAY-SERVICE/localhost:gateway-service:8602: registering service...
+20:30:55.805 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient  - DiscoveryClient_GATEWAY-SERVICE/localhost:gateway-service:8602 - registration status: 204
+20:30:56.007 [main] INFO  o.s.b.w.e.netty.NettyWebServer  - Netty started on port 8602
+20:30:56.009 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration  - Updating port to 8602
+20:30:57.249 [main] INFO  o.s.cloud.commons.util.InetUtils  - Cannot determine local hostname
+20:30:58.479 [main] INFO  o.s.cloud.commons.util.InetUtils  - Cannot determine local hostname
+20:30:58.510 [main] INFO  k.b.g.GatewayServiceApplication  - Started GatewayServiceApplication in 15.881 seconds (JVM running for 17.277)
+20:32:50.925 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry  - Unregistering application GATEWAY-SERVICE with eureka with status DOWN
+20:32:50.926 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1628767970926, current=DOWN, previous=UP]
+20:32:50.926 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient  - DiscoveryClient_GATEWAY-SERVICE/localhost:gateway-service:8602: registering service...
+20:32:50.932 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient  - DiscoveryClient_GATEWAY-SERVICE/localhost:gateway-service:8602 - registration status: 204
+20:32:52.997 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient  - Shutting down DiscoveryClient ...
+20:32:56.003 [DiscoveryClient-1] WARN  c.n.discovery.TimedSupervisorTask  - task supervisor shutting down, can't accept the task
+20:32:56.004 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient  - Unregistering ...
+20:32:56.008 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient  - DiscoveryClient_GATEWAY-SERVICE/localhost:gateway-service:8602 - deregister  status: 200
+20:32:56.020 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient  - Completed shut down of DiscoveryClient
+20:33:04.091 [background-preinit] INFO  o.h.validator.internal.util.Version  - HV000001: Hibernate Validator 6.2.0.Final
+20:33:04.092 [main] INFO  k.b.g.GatewayServiceApplication  - Starting GatewayServiceApplication using Java 14 on DESKTOP-TGGJB9J with PID 14476 (G:\git\bunda\backend\gateway-service\target\classes started by kjhhj in G:\git\bunda\backend)
+20:33:04.095 [main] INFO  k.b.g.GatewayServiceApplication  - The following profiles are active: prod-eureka,common,eureka,router
+20:33:05.280 [main] INFO  o.s.cloud.context.scope.GenericScope  - BeanFactory id=0bc572f6-7546-3450-baf4-f767887f7d6d
+20:33:05.364 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20:33:05.365 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20:33:05.368 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  - Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20:33:07.128 [main] INFO  o.s.cloud.commons.util.InetUtils  - Cannot determine local hostname
+20:33:07.565 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [After]
+20:33:07.566 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Before]
+20:33:07.566 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Between]
+20:33:07.566 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Cookie]
+20:33:07.566 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Header]
+20:33:07.566 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Host]
+20:33:07.566 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Method]
+20:33:07.566 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Path]
+20:33:07.566 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Query]
+20:33:07.566 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [ReadBody]
+20:33:07.567 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [RemoteAddr]
+20:33:07.567 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Weight]
+20:33:07.567 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [CloudFoundryRouteService]
+20:33:08.977 [main] INFO  o.s.cloud.commons.util.InetUtils  - Cannot determine local hostname
+20:33:10.211 [main] INFO  o.s.cloud.commons.util.InetUtils  - Cannot determine local hostname
+20:33:10.309 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver  - Exposing 15 endpoint(s) beneath base path '/actuator'
+20:33:10.620 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration  - Eureka HTTP Client uses RestTemplate.
+20:33:10.705 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger  - Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+20:33:10.785 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory  - Setting initial instance status as: STARTING
+20:33:10.822 [main] INFO  c.netflix.discovery.DiscoveryClient  - Initializing Eureka in region us-east-1
+20:33:10.827 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
+20:33:10.848 [main] INFO  c.netflix.discovery.DiscoveryClient  - Disable delta property : false
+20:33:10.848 [main] INFO  c.netflix.discovery.DiscoveryClient  - Single vip registry refresh property : null
+20:33:10.849 [main] INFO  c.netflix.discovery.DiscoveryClient  - Force full registry fetch : false
+20:33:10.849 [main] INFO  c.netflix.discovery.DiscoveryClient  - Application is null : false
+20:33:10.849 [main] INFO  c.netflix.discovery.DiscoveryClient  - Registered Applications size is zero : true
+20:33:10.849 [main] INFO  c.netflix.discovery.DiscoveryClient  - Application version is -1: true
+20:33:10.849 [main] INFO  c.netflix.discovery.DiscoveryClient  - Getting all instance registry info from the eureka server
+20:33:11.258 [main] INFO  c.netflix.discovery.DiscoveryClient  - The response status is 200
+20:33:11.261 [main] INFO  c.netflix.discovery.DiscoveryClient  - Starting heartbeat executor: renew interval is: 30
+20:33:11.263 [main] INFO  c.n.discovery.InstanceInfoReplicator  - InstanceInfoReplicator onDemand update allowed rate per min is 4
+20:33:11.269 [main] INFO  c.netflix.discovery.DiscoveryClient  - Discovery Client initialized at timestamp 1628767991268 with initial instances count: 1
+20:33:11.270 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry  - Registering application GATEWAY-SERVICE with eureka with status UP
+20:33:11.270 [main] INFO  c.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1628767991270, current=UP, previous=STARTING]
+20:33:11.272 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient  - DiscoveryClient_GATEWAY-SERVICE/localhost:gateway-service:8602: registering service...
+20:33:11.315 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient  - DiscoveryClient_GATEWAY-SERVICE/localhost:gateway-service:8602 - registration status: 204
+20:33:11.479 [main] INFO  o.s.b.w.e.netty.NettyWebServer  - Netty started on port 8602
+20:33:11.480 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration  - Updating port to 8602
+20:33:12.699 [main] INFO  o.s.cloud.commons.util.InetUtils  - Cannot determine local hostname
+20:33:13.926 [main] INFO  o.s.cloud.commons.util.InetUtils  - Cannot determine local hostname
+20:33:13.947 [main] INFO  k.b.g.GatewayServiceApplication  - Started GatewayServiceApplication in 11.716 seconds (JVM running for 12.979)
+20:33:54.526 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry  - Unregistering application GATEWAY-SERVICE with eureka with status DOWN
+20:33:54.526 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1628768034526, current=DOWN, previous=UP]
+20:33:54.527 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient  - DiscoveryClient_GATEWAY-SERVICE/localhost:gateway-service:8602: registering service...
+20:33:54.531 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient  - DiscoveryClient_GATEWAY-SERVICE/localhost:gateway-service:8602 - registration status: 204
+20:33:56.613 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient  - Shutting down DiscoveryClient ...
+20:33:59.625 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient  - Unregistering ...
+20:33:59.629 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient  - DiscoveryClient_GATEWAY-SERVICE/localhost:gateway-service:8602 - deregister  status: 200
+20:33:59.634 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient  - Completed shut down of DiscoveryClient
+20:34:07.574 [background-preinit] INFO  o.h.validator.internal.util.Version  - HV000001: Hibernate Validator 6.2.0.Final
+20:34:07.576 [main] INFO  k.b.g.GatewayServiceApplication  - Starting GatewayServiceApplication using Java 14 on DESKTOP-TGGJB9J with PID 25184 (G:\git\bunda\backend\gateway-service\target\classes started by kjhhj in G:\git\bunda\backend)
+20:34:07.578 [main] INFO  k.b.g.GatewayServiceApplication  - The following profiles are active: prod-eureka,common,eureka,router
+20:34:08.760 [main] INFO  o.s.cloud.context.scope.GenericScope  - BeanFactory id=0bc572f6-7546-3450-baf4-f767887f7d6d
+20:34:08.853 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20:34:08.854 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20:34:08.857 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  - Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20:34:10.545 [main] INFO  o.s.cloud.commons.util.InetUtils  - Cannot determine local hostname
+20:34:10.995 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [After]
+20:34:10.995 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Before]
+20:34:10.995 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Between]
+20:34:10.995 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Cookie]
+20:34:10.995 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Header]
+20:34:10.996 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Host]
+20:34:10.996 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Method]
+20:34:10.996 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Path]
+20:34:10.996 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Query]
+20:34:10.996 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [ReadBody]
+20:34:10.996 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [RemoteAddr]
+20:34:10.996 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Weight]
+20:34:10.996 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [CloudFoundryRouteService]
+20:34:12.412 [main] INFO  o.s.cloud.commons.util.InetUtils  - Cannot determine local hostname
+20:34:13.670 [main] INFO  o.s.cloud.commons.util.InetUtils  - Cannot determine local hostname
+20:34:13.772 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver  - Exposing 15 endpoint(s) beneath base path '/actuator'
+20:34:13.983 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration  - Eureka HTTP Client uses RestTemplate.
+20:34:14.041 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger  - Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+20:34:14.119 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory  - Setting initial instance status as: STARTING
+20:34:14.176 [main] INFO  c.netflix.discovery.DiscoveryClient  - Initializing Eureka in region us-east-1
+20:34:14.181 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
+20:34:14.211 [main] INFO  c.netflix.discovery.DiscoveryClient  - Disable delta property : false
+20:34:14.211 [main] INFO  c.netflix.discovery.DiscoveryClient  - Single vip registry refresh property : null
+20:34:14.212 [main] INFO  c.netflix.discovery.DiscoveryClient  - Force full registry fetch : false
+20:34:14.212 [main] INFO  c.netflix.discovery.DiscoveryClient  - Application is null : false
+20:34:14.212 [main] INFO  c.netflix.discovery.DiscoveryClient  - Registered Applications size is zero : true
+20:34:14.212 [main] INFO  c.netflix.discovery.DiscoveryClient  - Application version is -1: true
+20:34:14.212 [main] INFO  c.netflix.discovery.DiscoveryClient  - Getting all instance registry info from the eureka server
+20:34:14.572 [main] INFO  c.netflix.discovery.DiscoveryClient  - The response status is 200
+20:34:14.575 [main] INFO  c.netflix.discovery.DiscoveryClient  - Starting heartbeat executor: renew interval is: 30
+20:34:14.577 [main] INFO  c.n.discovery.InstanceInfoReplicator  - InstanceInfoReplicator onDemand update allowed rate per min is 4
+20:34:14.583 [main] INFO  c.netflix.discovery.DiscoveryClient  - Discovery Client initialized at timestamp 1628768054582 with initial instances count: 1
+20:34:14.584 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry  - Registering application GATEWAY-SERVICE with eureka with status UP
+20:34:14.584 [main] INFO  c.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1628768054584, current=UP, previous=STARTING]
+20:34:14.586 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient  - DiscoveryClient_GATEWAY-SERVICE/localhost:gateway-service:8602: registering service...
+20:34:14.651 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient  - DiscoveryClient_GATEWAY-SERVICE/localhost:gateway-service:8602 - registration status: 204
+20:34:14.831 [main] INFO  o.s.b.w.e.netty.NettyWebServer  - Netty started on port 8602
+20:34:14.832 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration  - Updating port to 8602
+20:34:16.065 [main] INFO  o.s.cloud.commons.util.InetUtils  - Cannot determine local hostname
+20:34:17.322 [main] INFO  o.s.cloud.commons.util.InetUtils  - Cannot determine local hostname
+20:34:17.346 [main] INFO  k.b.g.GatewayServiceApplication  - Started GatewayServiceApplication in 11.645 seconds (JVM running for 12.885)
+20:38:20.310 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry  - Unregistering application GATEWAY-SERVICE with eureka with status DOWN
+20:38:20.311 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1628768300311, current=DOWN, previous=UP]
+20:38:20.311 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient  - DiscoveryClient_GATEWAY-SERVICE/localhost:gateway-service:8602: registering service...
+20:38:20.316 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient  - DiscoveryClient_GATEWAY-SERVICE/localhost:gateway-service:8602 - registration status: 204
+20:38:22.365 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient  - Shutting down DiscoveryClient ...
+20:38:25.382 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient  - Unregistering ...
+20:38:25.387 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient  - DiscoveryClient_GATEWAY-SERVICE/localhost:gateway-service:8602 - deregister  status: 200
+20:38:25.392 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient  - Completed shut down of DiscoveryClient
+20:38:33.786 [background-preinit] INFO  o.h.validator.internal.util.Version  - HV000001: Hibernate Validator 6.2.0.Final
+20:38:33.792 [main] INFO  k.b.g.GatewayServiceApplication  - Starting GatewayServiceApplication using Java 14 on DESKTOP-TGGJB9J with PID 16900 (G:\git\bunda\backend\gateway-service\target\classes started by kjhhj in G:\git\bunda\backend)
+20:38:33.793 [main] INFO  k.b.g.GatewayServiceApplication  - The following profiles are active: prod-eureka,common,eureka,router
+20:38:35.070 [main] INFO  o.s.cloud.context.scope.GenericScope  - BeanFactory id=3de8bfb1-9f7a-3a52-a87c-6be3e0316c10
+20:38:35.151 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20:38:35.152 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20:38:35.156 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  - Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20:38:36.711 [main] INFO  o.s.cloud.commons.util.InetUtils  - Cannot determine local hostname
+20:38:37.098 [main] INFO  o.s.b.a.s.r.ReactiveUserDetailsServiceAutoConfiguration  - 
+
+Using generated security password: e32c5c89-abfd-49fb-8024-dab677d4bfab
+
+20:38:37.208 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [After]
+20:38:37.208 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Before]
+20:38:37.208 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Between]
+20:38:37.208 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Cookie]
+20:38:37.208 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Header]
+20:38:37.208 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Host]
+20:38:37.208 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Method]
+20:38:37.208 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Path]
+20:38:37.208 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Query]
+20:38:37.209 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [ReadBody]
+20:38:37.209 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [RemoteAddr]
+20:38:37.209 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Weight]
+20:38:37.209 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [CloudFoundryRouteService]
+20:38:38.647 [main] INFO  o.s.cloud.commons.util.InetUtils  - Cannot determine local hostname
+20:38:39.933 [main] INFO  o.s.cloud.commons.util.InetUtils  - Cannot determine local hostname
+20:38:40.034 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver  - Exposing 15 endpoint(s) beneath base path '/actuator'
+20:38:40.308 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration  - Eureka HTTP Client uses RestTemplate.
+20:38:40.370 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger  - Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+20:38:40.457 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory  - Setting initial instance status as: STARTING
+20:38:40.501 [main] INFO  c.netflix.discovery.DiscoveryClient  - Initializing Eureka in region us-east-1
+20:38:40.505 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
+20:38:40.529 [main] INFO  c.netflix.discovery.DiscoveryClient  - Disable delta property : false
+20:38:40.529 [main] INFO  c.netflix.discovery.DiscoveryClient  - Single vip registry refresh property : null
+20:38:40.529 [main] INFO  c.netflix.discovery.DiscoveryClient  - Force full registry fetch : false
+20:38:40.529 [main] INFO  c.netflix.discovery.DiscoveryClient  - Application is null : false
+20:38:40.529 [main] INFO  c.netflix.discovery.DiscoveryClient  - Registered Applications size is zero : true
+20:38:40.529 [main] INFO  c.netflix.discovery.DiscoveryClient  - Application version is -1: true
+20:38:40.529 [main] INFO  c.netflix.discovery.DiscoveryClient  - Getting all instance registry info from the eureka server
+20:38:40.966 [main] INFO  c.netflix.discovery.DiscoveryClient  - The response status is 200
+20:38:40.969 [main] INFO  c.netflix.discovery.DiscoveryClient  - Starting heartbeat executor: renew interval is: 30
+20:38:40.972 [main] INFO  c.n.discovery.InstanceInfoReplicator  - InstanceInfoReplicator onDemand update allowed rate per min is 4
+20:38:40.981 [main] INFO  c.netflix.discovery.DiscoveryClient  - Discovery Client initialized at timestamp 1628768320979 with initial instances count: 1
+20:38:40.983 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry  - Registering application GATEWAY-SERVICE with eureka with status UP
+20:38:40.984 [main] INFO  c.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1628768320984, current=UP, previous=STARTING]
+20:38:40.986 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient  - DiscoveryClient_GATEWAY-SERVICE/localhost:gateway-service:8602: registering service...
+20:38:41.034 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient  - DiscoveryClient_GATEWAY-SERVICE/localhost:gateway-service:8602 - registration status: 204
+20:38:41.211 [main] INFO  o.s.b.w.e.netty.NettyWebServer  - Netty started on port 8602
+20:38:41.212 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration  - Updating port to 8602
+20:38:42.452 [main] INFO  o.s.cloud.commons.util.InetUtils  - Cannot determine local hostname
+20:38:43.732 [main] INFO  o.s.cloud.commons.util.InetUtils  - Cannot determine local hostname
+20:38:43.766 [main] INFO  k.b.g.GatewayServiceApplication  - Started GatewayServiceApplication in 11.899 seconds (JVM running for 13.227)
+20:41:08.744 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry  - Unregistering application GATEWAY-SERVICE with eureka with status DOWN
+20:41:08.745 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1628768468745, current=DOWN, previous=UP]
+20:41:08.745 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient  - DiscoveryClient_GATEWAY-SERVICE/localhost:gateway-service:8602: registering service...
+20:41:08.749 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient  - DiscoveryClient_GATEWAY-SERVICE/localhost:gateway-service:8602 - registration status: 204
+20:41:10.822 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient  - Shutting down DiscoveryClient ...
+20:41:13.838 [DiscoveryClient-0] WARN  c.n.discovery.TimedSupervisorTask  - task supervisor shutting down, can't accept the task
+20:41:13.840 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient  - Unregistering ...
+20:41:13.845 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient  - DiscoveryClient_GATEWAY-SERVICE/localhost:gateway-service:8602 - deregister  status: 200
+20:41:13.849 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient  - Completed shut down of DiscoveryClient
+20:41:22.011 [background-preinit] INFO  o.h.validator.internal.util.Version  - HV000001: Hibernate Validator 6.2.0.Final
+20:41:22.013 [main] INFO  k.b.g.GatewayServiceApplication  - Starting GatewayServiceApplication using Java 14 on DESKTOP-TGGJB9J with PID 43416 (G:\git\bunda\backend\gateway-service\target\classes started by kjhhj in G:\git\bunda\backend)
+20:41:22.015 [main] INFO  k.b.g.GatewayServiceApplication  - The following profiles are active: prod-eureka,common,eureka,router
+20:41:23.271 [main] INFO  o.s.cloud.context.scope.GenericScope  - BeanFactory id=a0afa91f-22f6-37a4-81a6-65aba160b831
+20:41:23.359 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20:41:23.360 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20:41:23.363 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  - Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20:41:23.547 [main] WARN  o.s.security.core.userdetails.User  - User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
+20:41:25.135 [main] INFO  o.s.cloud.commons.util.InetUtils  - Cannot determine local hostname
+20:41:25.677 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [After]
+20:41:25.677 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Before]
+20:41:25.678 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Between]
+20:41:25.678 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Cookie]
+20:41:25.678 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Header]
+20:41:25.678 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Host]
+20:41:25.678 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Method]
+20:41:25.678 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Path]
+20:41:25.678 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Query]
+20:41:25.678 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [ReadBody]
+20:41:25.679 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [RemoteAddr]
+20:41:25.679 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Weight]
+20:41:25.679 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [CloudFoundryRouteService]
+20:41:27.073 [main] INFO  o.s.cloud.commons.util.InetUtils  - Cannot determine local hostname
+20:41:28.348 [main] INFO  o.s.cloud.commons.util.InetUtils  - Cannot determine local hostname
+20:41:28.453 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver  - Exposing 15 endpoint(s) beneath base path '/actuator'
+20:41:28.671 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration  - Eureka HTTP Client uses RestTemplate.
+20:41:28.726 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger  - Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+20:41:28.805 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory  - Setting initial instance status as: STARTING
+20:41:28.842 [main] INFO  c.netflix.discovery.DiscoveryClient  - Initializing Eureka in region us-east-1
+20:41:28.847 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
+20:41:28.868 [main] INFO  c.netflix.discovery.DiscoveryClient  - Disable delta property : false
+20:41:28.869 [main] INFO  c.netflix.discovery.DiscoveryClient  - Single vip registry refresh property : null
+20:41:28.869 [main] INFO  c.netflix.discovery.DiscoveryClient  - Force full registry fetch : false
+20:41:28.869 [main] INFO  c.netflix.discovery.DiscoveryClient  - Application is null : false
+20:41:28.869 [main] INFO  c.netflix.discovery.DiscoveryClient  - Registered Applications size is zero : true
+20:41:28.869 [main] INFO  c.netflix.discovery.DiscoveryClient  - Application version is -1: true
+20:41:28.869 [main] INFO  c.netflix.discovery.DiscoveryClient  - Getting all instance registry info from the eureka server
+20:41:29.269 [main] INFO  c.netflix.discovery.DiscoveryClient  - The response status is 200
+20:41:29.273 [main] INFO  c.netflix.discovery.DiscoveryClient  - Starting heartbeat executor: renew interval is: 30
+20:41:29.278 [main] INFO  c.n.discovery.InstanceInfoReplicator  - InstanceInfoReplicator onDemand update allowed rate per min is 4
+20:41:29.287 [main] INFO  c.netflix.discovery.DiscoveryClient  - Discovery Client initialized at timestamp 1628768489286 with initial instances count: 2
+20:41:29.290 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry  - Registering application GATEWAY-SERVICE with eureka with status UP
+20:41:29.290 [main] INFO  c.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1628768489290, current=UP, previous=STARTING]
+20:41:29.295 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient  - DiscoveryClient_GATEWAY-SERVICE/localhost:gateway-service:8602: registering service...
+20:41:29.370 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient  - DiscoveryClient_GATEWAY-SERVICE/localhost:gateway-service:8602 - registration status: 204
+20:41:29.569 [main] INFO  o.s.b.w.e.netty.NettyWebServer  - Netty started on port 8602
+20:41:29.571 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration  - Updating port to 8602
+20:41:30.823 [main] INFO  o.s.cloud.commons.util.InetUtils  - Cannot determine local hostname
+20:41:32.050 [main] INFO  o.s.cloud.commons.util.InetUtils  - Cannot determine local hostname
+20:41:32.072 [main] INFO  k.b.g.GatewayServiceApplication  - Started GatewayServiceApplication in 12.023 seconds (JVM running for 13.288)
+20:46:28.880 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
+20:47:35.224 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry  - Unregistering application GATEWAY-SERVICE with eureka with status DOWN
+20:47:35.224 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1628768855224, current=DOWN, previous=UP]
+20:47:35.224 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient  - DiscoveryClient_GATEWAY-SERVICE/localhost:gateway-service:8602: registering service...
+20:47:35.230 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient  - DiscoveryClient_GATEWAY-SERVICE/localhost:gateway-service:8602 - registration status: 204
+20:47:37.295 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient  - Shutting down DiscoveryClient ...
+20:47:40.310 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient  - Unregistering ...
+20:47:40.315 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient  - DiscoveryClient_GATEWAY-SERVICE/localhost:gateway-service:8602 - deregister  status: 200
+20:47:40.321 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient  - Completed shut down of DiscoveryClient
+20:47:45.466 [background-preinit] INFO  o.h.validator.internal.util.Version  - HV000001: Hibernate Validator 6.2.0.Final
+20:47:45.468 [main] INFO  k.b.g.GatewayServiceApplication  - Starting GatewayServiceApplication using Java 14 on DESKTOP-TGGJB9J with PID 16476 (G:\git\bunda\backend\gateway-service\target\classes started by kjhhj in G:\git\bunda\backend)
+20:47:45.471 [main] INFO  k.b.g.GatewayServiceApplication  - The following profiles are active: prod-eureka,common,eureka,router
+20:47:46.715 [main] INFO  o.s.cloud.context.scope.GenericScope  - BeanFactory id=a0afa91f-22f6-37a4-81a6-65aba160b831
+20:47:46.818 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20:47:46.819 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20:47:46.822 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  - Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20:47:46.997 [main] WARN  o.s.security.core.userdetails.User  - User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
+20:47:48.570 [main] INFO  o.s.cloud.commons.util.InetUtils  - Cannot determine local hostname
+20:47:49.061 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [After]
+20:47:49.061 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Before]
+20:47:49.061 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Between]
+20:47:49.061 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Cookie]
+20:47:49.061 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Header]
+20:47:49.061 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Host]
+20:47:49.063 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Method]
+20:47:49.063 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Path]
+20:47:49.063 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Query]
+20:47:49.063 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [ReadBody]
+20:47:49.063 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [RemoteAddr]
+20:47:49.063 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Weight]
+20:47:49.063 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [CloudFoundryRouteService]
+20:47:50.496 [main] INFO  o.s.cloud.commons.util.InetUtils  - Cannot determine local hostname
+20:47:51.744 [main] INFO  o.s.cloud.commons.util.InetUtils  - Cannot determine local hostname
+20:47:51.854 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver  - Exposing 15 endpoint(s) beneath base path '/actuator'
+20:47:52.048 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration  - Eureka HTTP Client uses RestTemplate.
+20:47:52.106 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger  - Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+20:47:52.177 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory  - Setting initial instance status as: STARTING
+20:47:52.225 [main] INFO  c.netflix.discovery.DiscoveryClient  - Initializing Eureka in region us-east-1
+20:47:52.229 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
+20:47:52.249 [main] INFO  c.netflix.discovery.DiscoveryClient  - Disable delta property : false
+20:47:52.249 [main] INFO  c.netflix.discovery.DiscoveryClient  - Single vip registry refresh property : null
+20:47:52.249 [main] INFO  c.netflix.discovery.DiscoveryClient  - Force full registry fetch : false
+20:47:52.249 [main] INFO  c.netflix.discovery.DiscoveryClient  - Application is null : false
+20:47:52.249 [main] INFO  c.netflix.discovery.DiscoveryClient  - Registered Applications size is zero : true
+20:47:52.249 [main] INFO  c.netflix.discovery.DiscoveryClient  - Application version is -1: true
+20:47:52.249 [main] INFO  c.netflix.discovery.DiscoveryClient  - Getting all instance registry info from the eureka server
+20:47:52.597 [main] INFO  c.netflix.discovery.DiscoveryClient  - The response status is 200
+20:47:52.600 [main] INFO  c.netflix.discovery.DiscoveryClient  - Starting heartbeat executor: renew interval is: 30
+20:47:52.604 [main] INFO  c.n.discovery.InstanceInfoReplicator  - InstanceInfoReplicator onDemand update allowed rate per min is 4
+20:47:52.610 [main] INFO  c.netflix.discovery.DiscoveryClient  - Discovery Client initialized at timestamp 1628768872609 with initial instances count: 1
+20:47:52.611 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry  - Registering application GATEWAY-SERVICE with eureka with status UP
+20:47:52.611 [main] INFO  c.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1628768872611, current=UP, previous=STARTING]
+20:47:52.613 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient  - DiscoveryClient_GATEWAY-SERVICE/localhost:gateway-service:8602: registering service...
+20:47:52.661 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient  - DiscoveryClient_GATEWAY-SERVICE/localhost:gateway-service:8602 - registration status: 204
+20:47:52.866 [main] INFO  o.s.b.w.e.netty.NettyWebServer  - Netty started on port 8602
+20:47:52.867 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration  - Updating port to 8602
+20:47:54.112 [main] INFO  o.s.cloud.commons.util.InetUtils  - Cannot determine local hostname
+20:47:55.365 [main] INFO  o.s.cloud.commons.util.InetUtils  - Cannot determine local hostname
+20:47:55.387 [main] INFO  k.b.g.GatewayServiceApplication  - Started GatewayServiceApplication in 11.931 seconds (JVM running for 13.279)
+20:48:18.546 [parallel-3] WARN  o.s.c.l.core.RoundRobinLoadBalancer  - No servers available for service: USER-SERVICE
+20:52:52.261 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
+20:58:46.813 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
+20:58:46.883 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry  - Unregistering application GATEWAY-SERVICE with eureka with status DOWN
+20:58:46.884 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1628769526884, current=DOWN, previous=UP]
+20:58:46.884 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient  - DiscoveryClient_GATEWAY-SERVICE/localhost:gateway-service:8602: registering service...
+20:58:46.888 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient  - DiscoveryClient_GATEWAY-SERVICE/localhost:gateway-service:8602 - registration status: 204
+20:58:48.979 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient  - Shutting down DiscoveryClient ...
+20:58:51.994 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient  - Unregistering ...
+20:58:51.999 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient  - DiscoveryClient_GATEWAY-SERVICE/localhost:gateway-service:8602 - deregister  status: 200
+20:58:52.005 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient  - Completed shut down of DiscoveryClient
+20:58:59.502 [background-preinit] INFO  o.h.validator.internal.util.Version  - HV000001: Hibernate Validator 6.2.0.Final
+20:58:59.505 [main] INFO  k.b.g.GatewayServiceApplication  - Starting GatewayServiceApplication using Java 14 on DESKTOP-TGGJB9J with PID 40040 (G:\git\bunda\backend\gateway-service\target\classes started by kjhhj in G:\git\bunda\backend)
+20:58:59.507 [main] INFO  k.b.g.GatewayServiceApplication  - The following profiles are active: prod-eureka,common,eureka,router
+20:59:00.651 [main] INFO  o.s.cloud.context.scope.GenericScope  - BeanFactory id=a0afa91f-22f6-37a4-81a6-65aba160b831
+20:59:00.742 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20:59:00.745 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20:59:00.751 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker  - Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20:59:00.911 [main] WARN  o.s.security.core.userdetails.User  - User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
+20:59:02.404 [main] INFO  o.s.cloud.commons.util.InetUtils  - Cannot determine local hostname
+20:59:02.884 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [After]
+20:59:02.884 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Before]
+20:59:02.884 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Between]
+20:59:02.884 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Cookie]
+20:59:02.885 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Header]
+20:59:02.885 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Host]
+20:59:02.885 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Method]
+20:59:02.885 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Path]
+20:59:02.885 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Query]
+20:59:02.885 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [ReadBody]
+20:59:02.885 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [RemoteAddr]
+20:59:02.885 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [Weight]
+20:59:02.885 [main] INFO  o.s.c.g.r.RouteDefinitionRouteLocator  - Loaded RoutePredicateFactory [CloudFoundryRouteService]
+20:59:04.331 [main] INFO  o.s.cloud.commons.util.InetUtils  - Cannot determine local hostname
+20:59:05.562 [main] INFO  o.s.cloud.commons.util.InetUtils  - Cannot determine local hostname
+20:59:05.667 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver  - Exposing 15 endpoint(s) beneath base path '/actuator'
+20:59:05.883 [main] INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration  - Eureka HTTP Client uses RestTemplate.
+20:59:05.951 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger  - Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+20:59:06.032 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory  - Setting initial instance status as: STARTING
+20:59:06.068 [main] INFO  c.netflix.discovery.DiscoveryClient  - Initializing Eureka in region us-east-1
+20:59:06.072 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
+20:59:06.115 [main] INFO  c.netflix.discovery.DiscoveryClient  - Disable delta property : false
+20:59:06.115 [main] INFO  c.netflix.discovery.DiscoveryClient  - Single vip registry refresh property : null
+20:59:06.116 [main] INFO  c.netflix.discovery.DiscoveryClient  - Force full registry fetch : false
+20:59:06.116 [main] INFO  c.netflix.discovery.DiscoveryClient  - Application is null : false
+20:59:06.116 [main] INFO  c.netflix.discovery.DiscoveryClient  - Registered Applications size is zero : true
+20:59:06.116 [main] INFO  c.netflix.discovery.DiscoveryClient  - Application version is -1: true
+20:59:06.116 [main] INFO  c.netflix.discovery.DiscoveryClient  - Getting all instance registry info from the eureka server
+20:59:06.493 [main] INFO  c.netflix.discovery.DiscoveryClient  - The response status is 200
+20:59:06.497 [main] INFO  c.netflix.discovery.DiscoveryClient  - Starting heartbeat executor: renew interval is: 30
+20:59:06.500 [main] INFO  c.n.discovery.InstanceInfoReplicator  - InstanceInfoReplicator onDemand update allowed rate per min is 4
+20:59:06.506 [main] INFO  c.netflix.discovery.DiscoveryClient  - Discovery Client initialized at timestamp 1628769546505 with initial instances count: 1
+20:59:06.507 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry  - Registering application GATEWAY-SERVICE with eureka with status UP
+20:59:06.507 [main] INFO  c.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1628769546507, current=UP, previous=STARTING]
+20:59:06.510 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient  - DiscoveryClient_GATEWAY-SERVICE/localhost:gateway-service:8602: registering service...
+20:59:06.571 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient  - DiscoveryClient_GATEWAY-SERVICE/localhost:gateway-service:8602 - registration status: 204
+20:59:06.776 [main] INFO  o.s.b.w.e.netty.NettyWebServer  - Netty started on port 8602
+20:59:06.778 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration  - Updating port to 8602
+20:59:07.989 [main] INFO  o.s.cloud.commons.util.InetUtils  - Cannot determine local hostname
+20:59:09.222 [main] INFO  o.s.cloud.commons.util.InetUtils  - Cannot determine local hostname
+20:59:09.253 [main] INFO  k.b.g.GatewayServiceApplication  - Started GatewayServiceApplication in 11.567 seconds (JVM running for 12.787)
+21:04:06.123 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
+21:09:06.134 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver  - Resolving eureka endpoints via configuration
+21:10:00.665 [SpringApplicationShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry  - Unregistering application GATEWAY-SERVICE with eureka with status DOWN
+21:10:00.666 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient  - Saw local status change event StatusChangeEvent [timestamp=1628770200666, current=DOWN, previous=UP]
+21:10:00.666 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient  - DiscoveryClient_GATEWAY-SERVICE/localhost:gateway-service:8602: registering service...
+21:10:00.671 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient  - DiscoveryClient_GATEWAY-SERVICE/localhost:gateway-service:8602 - registration status: 204
+21:10:02.751 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient  - Shutting down DiscoveryClient ...
+21:10:05.756 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient  - Unregistering ...
+21:10:05.760 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient  - DiscoveryClient_GATEWAY-SERVICE/localhost:gateway-service:8602 - deregister  status: 200
+21:10:05.764 [SpringApplicationShutdownHook] INFO  c.netflix.discovery.DiscoveryClient  - Completed shut down of DiscoveryClient

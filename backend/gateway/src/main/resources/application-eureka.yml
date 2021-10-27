@@ -1,0 +1,15 @@
+spring:
+  config:
+    activate:
+      on-profile: eureka
+
+eureka:
+  client:
+    enabled: true
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      default-zone : http://${EUREKA_HOST:localhost}:${EUREKA_PORT:8761}/eureka
+  instance:
+    prefer-ip-address: true
+

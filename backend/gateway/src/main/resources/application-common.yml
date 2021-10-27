@@ -1,0 +1,38 @@
+spring:
+  config:
+    activate:
+      on-profile: common
+  application:
+    name: gateway-service
+server:
+  port: 8602
+  ssl:
+    enabled: true
+    key-store: "gateway/cert/cert.jks"
+    key-store-type: "PKCS12"
+    key-store-password: Q1w2e3r4
+#    key-alias: xxxxx.com # (필요시) Alias 명 지정. CSR 자동 생성시에는 CN 명
+#    trust-store: # (필요시) "sslcert.co.kr.jks" 또는 "sslcert.co.kr.pfx" 지정. CSR 직접 생성시에는, 루트/체인 스토어 파일 지정
+#    trust-store-password: xxxxxxxx  # (필요시) jks 또는 pfx 암호
+
+
+# 유레카
+eureka:
+  client:
+    enabled: false
+
+# Actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+        exclude: 'threaddump,heapdump'
+
+bunda:
+  gateway:
+    id: admin
+    password: Q1w2e3r4
+  token:
+    access:
+      secret: ${ACCESS_SECRET:"accessaccessaccessaccessaccessaccessaccessaccessaccessaccessaccessaccess"}
